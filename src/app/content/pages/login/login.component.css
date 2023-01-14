@@ -1,0 +1,12 @@
+#login-form-wrapper {
+    width: 25vw;
+    height: 35vh;
+    margin: auto;
+    padding: 10rem;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+
+}

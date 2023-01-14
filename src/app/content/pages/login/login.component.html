@@ -1,0 +1,29 @@
+<div id="login-form-wrapper">
+    <h1 class="headline-1">Login</h1>
+    <form class="login-form" [formGroup]="loginForm" (ngSubmit)="submit()">
+        <mat-form-field class="example-full-width">
+            <mat-label>Email</mat-label>
+            <input type="email" matInput formControlName="email" placeholder="Ex. pat@example.com">
+            <mat-error
+                *ngIf="loginForm.controls['email'].hasError('email') && !loginForm.controls['email'].hasError('required')">
+                Please enter a valid email address
+            </mat-error>
+            <mat-error *ngIf="loginForm.controls['email'].hasError('required')">
+                Email is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Password</mat-label>
+            <input type="password" matInput formControlName="password" placeholder="Password">
+            <mat-error
+                *ngIf="loginForm.controls['password'].hasError('email') && !loginForm.controls['password'].hasError('required')">
+                Please enter a valid password
+            </mat-error>
+            <mat-error *ngIf="loginForm.controls['password'].hasError('required')">
+                Password is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+        <button mat-button>Login</button>
+    </form>
+</div>
