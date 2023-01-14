@@ -10,6 +10,8 @@ import { JwtModule } from '@auth0/angular-jwt';
 import { AuthGuardService } from './content/services/auth.service';
 import { HomeModule } from './content/pages/home/home.module';
 import { SidenavComponent } from './content/components/sidenav/sidenav.component';
+import { ProfileComponent } from './content/pages/profile/profile.component';
+import { ProfileModule } from './content/pages/profile/profile.module';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,7 @@ import { SidenavComponent } from './content/components/sidenav/sidenav.component
     AppRoutingModule,
     LoginModule,
     HomeModule,
+    ProfileModule,
     BrowserAnimationsModule,
     HttpClientModule,
     JwtModule.forRoot({

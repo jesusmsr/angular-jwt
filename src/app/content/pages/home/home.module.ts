@@ -7,10 +7,11 @@ import { SidenavComponent } from '../../components/sidenav/sidenav.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
+import { ProfileComponent } from '../profile/profile.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, SidenavComponent],
+  declarations: [HomeComponent, SidenavComponent, ProfileComponent],
   imports: [
     CommonModule,
     MatSidenavModule,
