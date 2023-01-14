@@ -8,10 +8,11 @@
             <mat-icon>person</mat-icon>
             <span>Profile</span>
         </button>
-        <button mat-button class="menu-button">
+        <button mat-button class="menu-button" [routerLink]="'recipes'">
             <mat-icon>info</mat-icon>
-            <span>About</span>
+            <span>Recipes</span>
         </button>
+
     </div>
     <div class="items-holder">
         <button mat-button class="menu-button justify-end" (click)="logout()">

@@ -1,0 +1,18 @@
+.recipes-holder {
+    padding-top: 15px;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.recipe {
+    max-width: 15vw;
+}
+
+.add-recipe-menu {
+    margin-left: 50px;
+}
+
+.recipe-desc {
+    word-break: break-all;
+}

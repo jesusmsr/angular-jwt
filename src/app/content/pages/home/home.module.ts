@@ -8,6 +8,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
 import { ProfileComponent } from '../profile/profile.component';
+import { MatDividerModule } from '@angular/material/divider';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { ProfileComponent } from '../profile/profile.component';
     MatButtonModule,
     MatIconModule,
     MatToolbarModule,
-    RouterModule
+    RouterModule,
+    MatDividerModule
   ]
 })
 export class HomeModule { }

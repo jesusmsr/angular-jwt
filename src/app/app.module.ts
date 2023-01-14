@@ -5,13 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginModule } from './content/pages/login/login.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { JwtModule } from '@auth0/angular-jwt';
 import { AuthGuardService } from './content/services/auth.service';
 import { HomeModule } from './content/pages/home/home.module';
-import { SidenavComponent } from './content/components/sidenav/sidenav.component';
-import { ProfileComponent } from './content/pages/profile/profile.component';
 import { ProfileModule } from './content/pages/profile/profile.module';
+import { RecipesModule } from './content/pages/recipes/recipes.module';
+import { AuthInterceptor } from './content/auth/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -23,6 +23,7 @@ import { ProfileModule } from './content/pages/profile/profile.module';
     LoginModule,
     HomeModule,
     ProfileModule,
+    RecipesModule,
     BrowserAnimationsModule,
     HttpClientModule,
     JwtModule.forRoot({
@@ -31,7 +32,10 @@ import { ProfileModule } from './content/pages/profile/profile.module';
       },
     }),
   ],
-  providers: [AuthGuardService],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+    AuthGuardService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
