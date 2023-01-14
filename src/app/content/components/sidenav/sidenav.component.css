@@ -1,0 +1,17 @@
+.sidenav-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.menu-button {
+    width: 250px;
+    font-size: 15px;
+    padding: 25px;
+}
+
+.items-holder {
+    display: flex;
+    flex-direction: column;
+}

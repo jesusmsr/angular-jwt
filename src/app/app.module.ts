@@ -6,19 +6,20 @@ import { AppComponent } from './app.component';
 import { LoginModule } from './content/pages/login/login.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
-import { HomeComponent } from './content/pages/home/home.component';
 import { JwtModule } from '@auth0/angular-jwt';
 import { AuthGuardService } from './content/services/auth.service';
+import { HomeModule } from './content/pages/home/home.module';
+import { SidenavComponent } from './content/components/sidenav/sidenav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     LoginModule,
+    HomeModule,
     BrowserAnimationsModule,
     HttpClientModule,
     JwtModule.forRoot({
