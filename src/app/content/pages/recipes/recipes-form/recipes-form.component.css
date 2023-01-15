@@ -1,0 +1,8 @@
+.recipes-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.recipe-form-holder {
+    width: 50vw;
+}

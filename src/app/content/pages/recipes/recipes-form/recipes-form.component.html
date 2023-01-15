@@ -1,0 +1,22 @@
+<h2 mat-dialog-title>Add recipe</h2>
+<mat-dialog-content class="recipe-form-holder">
+    <div>
+        <form id="recipesForm" [formGroup]="recipesForm" (ngSubmit)="submit()" class="recipes-form">
+            <mat-form-field appearance="fill">
+                <mat-label>Title</mat-label>
+                <input matInput placeholder="Recipe title" formControlName="title" required>
+                <mat-error *ngIf="recipesForm.controls['title'].invalid">You must enter a value</mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Description</mat-label>
+                <textarea matInput cols="30" rows="10" formControlName="description" required></textarea>
+            </mat-form-field>
+        </form>
+
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button form="recipesForm" type="submit">Create</button>
+</mat-dialog-actions>
